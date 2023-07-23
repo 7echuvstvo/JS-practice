@@ -233,14 +233,14 @@
 
 // ----------- удаление данных из массива , которые не являются числом -----------
 
-const arrA = [3, 'hello', null, 42, false];
+// const arrA = [3, 'hello', null, 42, false];
 
-for (let i = arrA.length - 1; i >= 0; i -= 1) {
-  //   console.log(arrA[i]);
-  if (typeof arrA[i] !== 'number') {
-    arrA.splice(i, 1);
-  }
-}
-console.log(arrA);
+// for (let i = arrA.length - 1; i >= 0; i -= 1) {
+//   //   console.log(arrA[i]);
+//   if (typeof arrA[i] !== 'number') {
+//     arrA.splice(i, 1);
+//   }
+// }
+// console.log(arrA);
 
 // ----------------  ------------------
