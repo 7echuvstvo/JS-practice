@@ -13,24 +13,90 @@
     <link rel="stylesheet" href="./css/modern-normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./images/favicon.png">
+    <style>
+        .green-text {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1 class="title js-title">Hello World</h1>
+    <div class="div">
+        <text class="text">Java Script Testing</text>
+    </div>
 
+    <!-- Сегодняшняя дата -->
+    <div class="div">
+        <p id="currentDate"></p>
+    </div>
 
-    <ul class="js-list">
-        <li class="js-item">1</li>
-        <li class="js-item">2</li>
-        <li class="js-item">3</li>
-        <li class="js-item">4</li>
-    </ul>
+    <!-- ПОГОДА -->
 
+    <div class="div2">
+        <div id="SinoptikInformer" style="width:190px;" class="SinoptikInformer type4c1">
+            <div class="siHeader">
+                <div class="siLh">
+                    <div class="siMh"><a onmousedown="siClickCount();" class="siLogo" href="https://sinoptik.ua/"
+                            target="_blank" rel="nofollow" title="Погода"> </a>Погода </div>
+                </div>
+            </div>
+            <div class="siBody">
+                <div class="siTitle"><span id="siHeader"></span></div><a onmousedown="siClickCount();"
+                    href="https://sinoptik.ua/погода-киев" title="Погода в Киеве" target="_blank">
+                    <div class="siCity">
+                        <div class="siCityName"><span>Киев</span></div>
+                        <div id="siCont0" class="siBodyContent">
+                            <div class="siLeft">
+                                <div class="siTerm"></div>
+                                <div class="siT" id="siT0"></div>
+                                <div id="weatherIco0"></div>
+                            </div>
+                            <div class="siInf">
+                                <p>влажность: <span id="vl0"></span></p>
+                                <p>давл.: <span id="dav0"></span></p>
+                                <p>ветер: <span id="wind0"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="siLinks">Погода на 10 дней от <a href="https://sinoptik.ua/погода-киев/10-дней"
+                        title="Погода на 10 дней" target="_blank" onmousedown="siClickCount();">sinoptik.ua</a></div>
+            </div>
+            <div class="siFooter">
+                <div class="siLf">
+                    <div class="siMf"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" charset="UTF-8"
+            src="//sinoptik.ua/informers_js.php?title=3&amp;wind=1&amp;cities=303010783&amp;lang=ru"></script>
+    </div>
 
-    <!-- <script src="./js/lesson_2-3.js"></script>
-    <script src="./js/lesson_2-4.js"></script> -->
-    <script src="./js/lesson_6-11.js"></script>
+    <script>
+        // Создаем объект Date
+        let currentDate = new Date();
+
+        // Получаем текущую дату
+        let day = currentDate.getDate();
+        let month = currentDate.getMonth() + 1; // Месяцы в объекте Date начинаются с 0, поэтому добавляем 1
+        let year = currentDate.getFullYear();
+
+        // Форматируем дату в нужном формате (например, DD.MM.YYYY)
+        let formattedDate = `${day < 10 ? '0' : ''}${day}.${month < 10 ? '0' : ''}${month}.${year}`;
+
+        // Отображаем дату на странице
+        document.getElementById('currentDate').innerHTML = `<span class="green-text">Сегодня:</span> ${formattedDate}`;
+    </script>
+
+    <!-- Ваш остальной код -->
+
+    <!-- <script src="./js/lesson_1.js"></script> -->
+
+    <script src="./js/lesson_2.js"></script>
+
+    <script src="./js/lesson_3.js"></script>
+
 
     <!-- <script src="./js/test-script.js"></script>
     <script src="./js/grop-practice.js"></script>
@@ -39,7 +105,7 @@
     <script src="./js/hw-3.js"></script>
     <script src="./js/hw-4.js"></script>
     <script src="./js/hw-5.js"></script>
-    <script src="./js/hw-6.js"></script>-->
+    <script src="./js/hw-6.js"></script>
 
 </body>
 
