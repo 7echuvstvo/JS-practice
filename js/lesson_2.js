@@ -58,8 +58,20 @@
 // sayHi();
 
 // ------------
-let block = [2, 4, 6, 7, 9];
+// let block = [2, 4, 6, 7, 9];
 
-const newEl = block.slice(2, 8);
-console.log(block);
-console.log(newEl);
+// const newEl = block.slice(2, 8);
+// console.log(block);
+// console.log(newEl);
+
+// =============================
+
+const array = ['text', 9, null, 50, undefined, 41, 'Hello'];
+
+for (let i = array.length - 1; i >= 0; i -= 1) {
+  if (typeof array[i] !== 'number') {
+    console.log(array[i]);
+    array.splice(i, 1);
+  }
+}
+console.log(array);
